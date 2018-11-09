@@ -1,0 +1,1126 @@
+/*积分商城首页-兑换商品及M币数量展示 主色调#ff2c63 下框线d9d9d9,字体灰色868686*/
+/*顶部导航栏*/
+*{
+	box-sizing: border-box;
+}
+::-webkit-scrollbar {
+
+ -webkit-overflow-scrolling: touch;
+}
+
+.mTop10{
+	margin-top:10px;
+}
+.padLR12{
+	padding: 0 0.12rem;
+}
+
+/*index遮罩层*/
+.shadow{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.6);
+	z-index: 8;
+}
+/*taskCenter遮罩层*/
+.taskCentershadow{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.6);
+	z-index: 8;
+}
+
+/*下单窗口*/
+.buyGoodsbox{
+	overflow: hidden;
+	font-size:0.16rem;
+	width:100%;
+	z-index: 9;
+	background: #fff;
+	height: 3.36rem;
+	border-radius:0.1rem 0.1rem 0 0;
+	padding: 0.15rem 0.12rem;
+	
+}
+
+.buyGoodsDet{
+	height:0.68rem;
+	padding-bottom:0.15rem ;
+	border-bottom: 1px solid #D9D9D9;
+	display: -webkit-flex;
+	display: flex;
+}
+.buyGoodsPic{
+	width:0.55rem;
+	height:0.53rem;
+	margin-right: 0.1rem;
+	
+}
+.buyGoodsDet{
+	flex:1;
+}
+.buyGoodsName{
+	height:0.27rem;
+	line-height: 0.27rem;
+}
+.buyGoodsMcoin{
+	height:0.26rem;
+	line-height: 0.26rem;
+}
+.GoodsMnm{
+	color:#FF2C63;
+	padding-right: 0.14rem;
+}
+.GoodsMnm, .allMnm{
+	display: inline-block;
+	
+}
+.GoodsMnm i{
+	display: inline-block;
+	width:0.08rem;
+	height: 0.09rem;
+	margin-right: 0.07rem;
+	background: url(../img/integralMcoinB.png) center no-repeat;
+	background-size: contain;
+}
+.allMnm{
+	color:#868686;
+}
+.goodsNum{
+	height:0.58rem;
+	border-bottom: 1px solid #D9D9D9;
+	line-height: 0.58rem;
+	display: -webkit-flex;
+	display: flex;
+}
+.goodsNum div{
+	flex:1;
+}
+.goodsNumTitle{
+	text-align: left;
+}
+.goodsNumOp{
+	text-align: right;
+}
+.nmcom{
+	width:0.4rem;
+	height:0.35rem;
+	background: #f5f5f5;
+	color:#868686;
+	font-size: 0.18rem;
+	font-weight: bold;
+	text-align: center;
+	line-height: 0.35rem;
+	display: inline-block;
+}
+#nm{
+	display: inline-block;
+	width:0.54rem;
+	text-align: center;
+}
+.indexAddress{
+	height:0.94rem;
+	border-bottom: 1px solid #D9D9D9;
+	display: -webkit-flex;
+	display:flex;
+}
+.changeAdd{
+	float:right;
+	
+}
+.changeAdd a{
+	color:#FF2C63;
+}
+.getMcoin{
+	height:0.38rem;
+	line-height: 0.38rem;
+	color:#fff;
+	margin: 15px;
+	text-align: center;
+}
+.getMcoin i{
+	background: url(../img/inforIcon.png) center no-repeat;
+	display: inline-block;
+	width:0.22rem;
+	height:0.22em;
+	background-size:contain ;
+	margin-top: 0.08rem;
+	margin-right: 0.1rem;
+	float: left;
+}
+.getMcoin a{
+	color:#fff;
+	display: block;
+	height:100%;
+}
+.getMcoin p{
+	width:2.1rem;
+	margin:0 auto;
+	}
+.MnotEnough{
+background: #D9D9D9;
+}
+.mEnough{
+	background: #FF2C63;
+}
+
+
+
+
+.header{
+	height: 0.4rem;
+	font-size:0.18rem;
+	text-align: center;
+	line-height: 0.4rem;
+	position: relative;
+}
+.backPre{
+	position: absolute;
+	left:0px;
+	top:0;
+	display: inline-block;
+	width:0.4rem;
+	height: 0.4rem;	
+}
+/*透明背景 白色图标*/
+.hearTopTansp{
+	background: transparent;
+	color:#fff;
+}
+/*红色背景-白色图标*/
+.headerTopBgR{
+	background: #ff2c63;
+	color:#fff;
+}
+.hearTopTansp .backPre{
+	background: url(../img/intergralBackW.png) center no-repeat;
+	background-size:contain; 
+}
+.headerTopBgR .backPre{
+	background: url(../img/intergralBackW.png) center no-repeat;
+	background-size:contain; 
+}
+/*白色背景-黑色图标*/
+.headerTopBgW{
+	background: #fff;
+}
+.headerTopBgW .backPre{
+	background: url(../img/intergralBackB.png) center 2px  no-repeat;
+	background-size:contain; 
+}
+/*banner区域*/
+.banner{
+	width: 100%;
+	height: 1.4rem;
+	background: #de406a;
+	margin-bottom: 0.1rem;
+	position: relative;
+}
+.exchangeRecord{
+	position: absolute;
+	top:0.15rem;
+	right:0.1rem;
+	color: #fff;
+	font-size: 0.16rem;
+}
+.bannerMcoin{
+	text-align: center;
+	line-height: 1.4rem;
+	font-size: 0.3rem; 
+	color: #fff;
+}
+.bannerMcoin i{
+	display: inline-block;
+	width: 0.14rem;
+	height: 0.15rem;
+	background: url(../img/integralMcoinW.png) center no-repeat;
+	background-size:contain;
+	margin-right: 0.1rem;
+}
+/*大家都在兑*/
+.goodsExchange{
+	background: #fff;
+	height: auto;
+}
+.exchangeTitle{
+	height: 0.5rem;
+	/*line-height: 0.5rem;*/
+	padding-left: 0.15rem;
+	border-bottom: 1px solid #ebebeb;
+}
+.exchangeTitle span{
+	font-size: 0.16rem;
+	height: 0.16rem;
+	line-height: 0.16rem;
+	border-left:3px solid #ff2c63;
+	padding-left: 0.18rem;
+}
+.goodsLists{
+	display: flex;
+   flex-wrap:wrap;
+   background: #fff;
+}
+.wrapperbd{
+	position: relative;
+	overflow: hidden;
+	min-height: 4.2rem;
+}
+.homewrapper{
+	position: absolute;
+	width:100%;
+	top:0.2rem;
+	bottom:0.8rem;
+}
+.goodsLists .goods{
+	width: 1.8rem;
+	margin-top: 0.3rem;
+	height: 2rem;
+	padding: 0 0.15rem;
+	text-align: center;
+}
+.goodsPic{
+	height: 0.64rem;
+	width:0.76rem;
+	margin-bottom:0.14rem;
+   margin-left: 0.38rem;
+}
+.picCom{
+	text-align:center;
+	width:72%;
+	height:100%;
+}
+.goodsDet{
+	height: 0.23rem;
+	margin-bottom: 0.1rem;
+	font-size: 0.14rem;
+}
+
+.LimitQuantity{
+	color:#01c170;
+	border:1px solid #01c170;
+	border-radius: 0.03rem;
+	padding: 0.02rem 0.04rem;
+}
+.goodsPrice{
+	height: 0.2rem;
+	font-size: 0.14rem;
+	color:#ff2c63;
+	margin-bottom: 0.1rem;
+
+}
+.goodsPrice i{
+	display: inline-block;
+	width:0.08rem;
+	height: 0.09rem;
+	margin-right: 7px;
+	background: url(../img/integralMcoinB.png) center no-repeat;
+	background-size: contain;
+}
+.ExchangeNowbox{
+	text-align: center;
+}
+.ExchangeNow{
+	padding: 0.03rem 0.18rem;
+	border:2px solid #ff2c63;
+	border-radius: 0.05rem;
+	text-align: center;
+	color:#ff2c63;
+	font-size: 0.15rem;
+
+}
+
+
+
+/*兑换记录页面*/
+.ExchangedGList{
+	padding: 0 0.12rem;
+	background: #fff;
+}
+.ExchangedG{
+	display: flex;
+	display: -webkit-flex;
+	height: 0.84rem;
+	padding: 0.15rem 0;
+	border-bottom: 1px solid #d9d9d9;
+	color:#343434;
+}
+.goodsRecordPic{
+	width: 0.55rem;
+	height:0.53rem;
+	margin-right: 0.14rem;
+	overflow:hidden;
+}
+.goodsRecordDet{
+	flex:1;
+}
+.goodsRecordTitle, .goodsRecordStatus{
+	height: 0.26rem;
+	font-size: 0.15rem;
+	line-height: 0.26rem;
+}
+.goodsRecordStatus{
+	color:#868686;
+}
+
+
+/*添加地址管理*/
+.addAddress{
+	
+}
+.addressDet{
+	height:2.5rem;
+	padding: 0 0.12rem;
+	background: #fff;
+	
+}
+#addDetails{
+	height:1.5rem;
+	line-height: 0.5rem;
+}
+.addressDet .comIput{
+	color:#343434;
+	font-size: 0.16rem;
+	height:0.5rem;
+	line-height: 0.5rem;
+	display:block;
+	width:100%;
+	border:none;
+	outline:none;
+	border-bottom: 1px solid #d9d9d9;
+	-webkit-appearance: none !important;    
+	-moz-appearance:textfield;
+}
+.addressDet .comIput:last-child{
+	border-bottom: none;
+}
+.setdefault{
+	height:0.7rem;
+	font-size: 0.16rem;
+	padding: 0.15rem 0.12rem;
+}
+.mint-switch-input:checked + .mint-switch-core{
+	background-color:#FF2C63!important ;
+	border-color:#FF2C63!important;
+}
+/*.setdefault span{
+	float: left;
+	display: inline-block;
+	width:0.2rem;
+	height:0.2rem;
+	background: #fff;
+	border:1px solid #D9D9D9;
+	border-radius: 0.1rem;
+	margin-right: 0.09rem;
+}*/
+.savebtn{
+	position: absolute;
+	bottom:0.2rem;
+	padding: 0 0.12rem;
+	width: 100%;
+	font-size: 0.16rem;
+}
+#saveAddress{
+	
+	display: block;
+  width: 100%;
+	height:0.38rem;
+	text-align: center;
+	line-height: 0.38rem;
+	color:#fff;
+	background: #FF2C63;
+}
+
+
+/*收货地址列表*/
+.addNewAddress{
+	padding: 0.18rem 0.12rem;
+	height:0.74rem;
+	background: #fff;
+	line-height: 0.74;
+	border-bottom: 1px solid #D9D9D9;
+	}
+.addNewAddress button{
+	width:100%;
+	background-color:#fff ;
+	height:0.38rem;
+	border:1px solid #d9d9d9;
+	border-radius: 0.19rem;
+	display: block;
+	color:#FF2C63;
+	font-size: 0.16rem;
+	text-align:center;
+	line-height: 0.38rem;
+
+}
+.addNewAddress button i{
+	background: url(../img/addIcon.png) center no-repeat;
+	display: inline-block;
+	width:0.14rem;
+	height:0.14rem;
+	background-size: contain;
+	margin-right: 0.08rem;
+}
+.addressMsg{
+	height:0.94rem;
+	padding: 0 0.12rem;
+	background: #fff;
+	margin-top: 0.1rem;
+	border-bottom: 1px solid #D9D9D9;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+}
+.editBtn, .DefaultAddIcon{
+	width:0.15rem;
+	height:0.15rem;
+	margin-top:0.39rem ;
+}
+.editBtn{
+	display: block;
+	margin-right:0.2rem;
+	background: url(../img/addrEditIcon.png) center no-repeat;
+	background-size:contain;
+}
+.DefaultAddIcon{
+	margin-left:0.2rem;
+	background:url(../img/dafAddrIcon.png) center no-repeat;
+	background-size:contain;
+}
+.msgList{
+	font-size: 0.16rem;
+	padding: 0.2rem 0;
+	flex: 1; 
+	overflow: hidden; 
+}
+.userName{
+	padding-right: 0.11rem;
+	
+}
+.userAddDet{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+ height: 0.27rem;
+ line-height: 0.27rem;
+	color:#868686;
+}
+
+
+/*兑换成功*/
+.recordDetMsg section{
+	border-bottom: 1px solid #d9d9d9;
+	background: #fff;
+	font-size: 0.16rem;
+	}
+	.tipsMsg{
+		height:0.74rem;
+		line-height: 0.74rem;
+	}
+	.tipsMsg span{
+		width:1.3rem;
+		font-size: 0.18rem;
+		margin:0 auto;
+		display: block;
+	}
+	.tipsMsg span i{
+		display: inline-block;
+		float: left;
+		margin-top: 0.25rem;
+		width:0.21rem;
+		height:0.21rem;
+		line-height: 0.21rem;
+		background-size: contain;
+		margin-right: 0.1rem;
+	}
+	.recordOk{
+		background: url(../img/ExchOkIcon_03.png) center no-repeat;
+	}
+	.recordFail{
+		font-size: 25px;
+    	color: rgb(241, 5, 5);
+    	font-family: "iconfont" !important;
+	}
+	.recordFail:before{
+		content: "\E77E";
+	}
+	.msgTitle{
+		width:0.74em;
+		line-height: 0.5rem;
+		color:#868686;
+	}
+	.orderAddress{
+		height:0.94rem;
+		display: flex;
+		display: -webkit-flex;
+		
+	}
+	.orderAddIcon{
+		width:0.18rem;
+		height:0.23rem;
+		margin-right: 0.21rem;
+		margin-top: 0.36rem;
+		background:url(../img/addrIcon_03.png) center no-repeat;
+		background-size:contain;
+	}
+	.orderAddMsg{
+		overflow: hidden;
+		flex:1;
+		padding: 0.2rem 0;
+	}
+	.orderAddUser{
+		height: 0.27rem;
+		line-height: 0.27rem;
+	}
+	#orderUserAddMsg{
+	height:0.27rem;
+	line-height:0.27rem;
+		font-size: 0.15rem;
+		color:#868686;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.orderGoodsDetails{
+		height:1.02rem;
+		display: flex;
+		display: -webkit-flex;
+		padding: 0.15rem 0.12rem;
+	}
+	.orderGoogsPic{
+		width:0.75rem;
+		height:0.72rem;
+		margin-right: 0.25rem;
+	}
+	.orderGoodsNameDet{
+		flex: 1;
+		font-size:0.15rem;
+	}
+	
+	
+	
+	
+	/*任务中心*/
+	.taskCenterBanner{
+		position: relative;
+		border-radius: 0 0 0.3rem 0.3rem;
+		padding: 0 0.12rem;
+		height:3.15rem;
+		background: url(../img/taskCenterBannerBg.png) left top repeat-x;
+	}
+	@media only screen and (min-width: 1024px){
+    .taskCenterBanner{
+			height:722px;
+		}
+		.mCoinIcon{
+			width:234px!important;
+			height:234px!important;
+			background: url(../img/taskCenterMicon.png) center no-repeat;
+			 background-size: contain;
+			 margin: 0 auto 0!important;
+
+		}
+		.myMcoin{
+			margin-top:20px!important;
+		}
+		.myMcoinNm{
+			height:88px!important;
+			line-height: 88px!important;
+			margin-bottom:40px!important;
+			margin-top:18px!important;
+		}
+		
+}
+.taskCenterBannerContent{
+	color:#fff;
+}
+.mCoinIcon{
+	width:1.17rem;
+	height:1.17rem;
+	background: url(../img/taskCenterMicon.png) center no-repeat;
+	 background-size: contain;
+	margin: 0.18rem auto 0;
+
+}
+.myMcoin{
+	font-size: 0.15rem;
+	line-height: 0.16rem;
+	margin-top:0.2rem;
+	text-align: center;
+}
+.myMcoinNm{
+	text-align: center;
+	font-size: 0.3rem;
+	margin-top: 0.09rem;
+	margin-bottom: 0.2rem;
+}
+.todayGetMnm{
+	text-align: center;
+	font-size: 0.15rem;
+}
+.marketAddReward{
+	position:absolute;
+	bottom:-0.47rem;
+	height:0.64rem;
+	width:3.4rem;
+	margin:0 auto;
+	background: #fff;
+	border-radius: 0.06rem;
+	box-shadow: 0 3px 2px #eceff2;
+	display: -webkit-flex;
+	display: flex;
+}
+.marketAddReward .marketaotu{
+	line-height: 0.35rem;
+	flex:1;
+	padding: 0.15rem 0 0.14rem 0;
+}
+.marketAddRewardLine{
+	width:2px;
+	height:0.2rem;
+	margin-top:0.22rem ;
+	background: #D9D9D9;
+}
+.marketaotu a{
+	font-size: 0.14rem;
+	display: block;
+	width:100%;
+	height:100%;
+	color:#343434;
+}
+.marketaotu i{
+	display: inline-block;
+	width:0.35rem;
+	height:0.35rem;
+	margin-right: 0.11rem;
+	float:left;
+}
+.market i{
+	
+	margin-left: 0.23rem;
+	background: url(../img/taskCentermMarket.png) center no-repeat;
+	background-size: contain;
+}
+.Reward i{
+	background: url(../img/tashCentermDraw.png) center no-repeat;
+	background-size: contain;
+	margin-left: 0.29rem;
+}
+.taskNotice{
+	height:0.4rem;
+	line-height: 0.4rem;
+	display: -webkit-flex;
+	display: flex;
+	padding: 0 0.12rem;
+	    margin-top: 0.47rem;
+}
+.noticeIcon{
+	margin-top: 0.1rem;
+	width:0.3rem;
+	height:0.17rem;
+	margin-right: 0.2rem;
+	margin-left: 0.15rem;
+	background: url(../img/taskCenterNotice.png) center no-repeat;
+	background-size:contain;
+}
+#noticeList{
+	overflow: hidden;
+	height:0.4rem;
+	position: relative;
+}
+#noticeList p{
+	flex: 1;
+	color:#fdbe00;
+	font-size: 0.14rem;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space: nowrap;
+}
+.main{
+	padding: 0 0.12rem;
+	
+}
+.mainCom{
+	background: #fff;
+	border-radius: 0.06rem;
+	box-shadow: 0 5px 5px #e7eaee;
+	padding: 0.12rem 0.15rem;
+	margin-bottom: 0.13rem;
+}
+.newbieTask{
+	height:2.13rem;
+}
+.newbieTaskHead{
+	height:0.31rem;
+	
+}
+.newbieTaskTit{
+	float: left;
+}
+.newbieTaskHeadGetM{
+	float: right;
+	height:0.3rem;
+	line-height: 0.3rem;
+	font-size: 0.14rem;
+	color:#FF2C63;
+	border:1px solid #FF2C63;
+	padding: 0 0.1rem;
+	border-radius: 0.15rem;
+}
+.newbieTaskExplain{
+	margin-bottom: 0.12rem;
+	font-size: 0.14rem;
+	line-height: 0.2rem;
+}
+.signIn{
+	height:2.8rem;
+}
+.dayTask{
+	height:2.82rem;
+}
+.videoReward{
+	height:1.55rem;
+}
+.InvitationFriends{
+	height:2.45rem;
+}
+.newbieTaskHead{
+	height:0.3rem;
+	line-height: 0.3rem;
+	margin-bottom: 0.11rem;
+}
+.newbieTaskTit{
+	font-size: 0.2rem;
+	font-weight: bold;
+}
+.newbieTaskTit i{
+	display: inline-block;
+	width:0.16rem;
+	height:0.16rem;
+	background: url(../img/taskCenterAskIcon.png) center no-repeat;
+	background-size: contain;
+	margin-left: 0.06rem;
+}
+.newbieTaskList p{
+	height:0.24rem;
+	line-height: 0.24rem;
+	color:#868686;
+	font-size: 0.14rem;
+}
+.flRtSpan{
+	float: right;
+	margin-right: 0.2rem;
+}
+.youCanGet{
+	background: #FF2C63;
+	color:#fff!important;
+}
+.dayTaskListIcon{
+	width:0.5rem;
+	height:0.5rem;
+	background: url(../img/getMcoin.png) center no-repeat;
+	background-size: contain;
+	margin-right: 0.1rem;
+}
+.dayTaskListIcon p{
+	color:#fff;
+	font-size: 0.11rem;
+	margin-top: 0.36rem;
+	text-align: center;
+	line-height: 0.14rem;
+	
+}
+.dayTaskList{
+	display: -webkit-flex;
+	display: flex;
+	margin-top: 0.25rem;
+}
+.dayTaskListMsg{
+	flex:1;
+}
+.dayTaskListMsgTit{
+	font-size: 0.17rem;
+	font-weight: bold;
+}
+.dayTaskListMsgTit i{
+	display: inline-block;
+	width:0.16rem;
+	height:0.16rem;
+	background: url(../img/taskCenterAskIcon.png) center no-repeat;
+	background-size: contain;
+	margin-left: 0.06rem;
+}
+.dayTaskListMsg p:first-child span:nth-child(2){
+	float: right;
+	font-size: 0.14rem;
+	margin-right:0.12rem;
+	height:0.2rem;
+	line-height: 0.24rem;
+	padding: 0 0.12rem;
+}
+.dayTaskListMsg p:first-child .youCanGet{
+	
+	border-radius: 0.1rem;
+}
+.dayTaskListMsg p:nth-child(2){
+	margin-top: 0.09rem;
+	font-size: 0.14rem;
+	color:#868686;
+	line-height: 0.2rem;
+}
+.videoRewardCondition p{
+	color:#868686;
+	font-size: 0.14rem;
+	line-height: 0.2rem;
+}
+.videoRewardCondition p{
+	font-size: 0.14rem;
+	color:#868686;
+	line-height: 0.2rem;
+	margin-bottom: 0.05rem;
+}
+.goInvitationFriends{
+	width:3.08rem;
+	height:0.89rem;
+	margin:0.34rem auto 0;
+	background: url(../img/taskCenterInviteFriends.png) center no-repeat;
+	background-size: contain;
+	font-size: 0.2rem;
+	font-weight: bold;
+	line-height: 0.89rem;
+	text-align: center;
+	color:#fff;
+}
+.taskCenterFoot{
+	height:2.1rem;
+}
+.taskCenterFoot p{
+	text-align: center;
+	font-size: 0.12rem;
+	line-height: 0.2rem;
+	color:#5a5c61;
+}
+.taskCenterFoot p:first-child{
+	color:#1d2088;
+	font-size: 0.14rem;
+	padding-top: 0.65rem;
+	margin-bottom: 0.17rem;
+}
+.taskCenterFoot p:nth-child(3){
+	padding-bottom: 0.8rem;
+}
+.McoinDetailed{
+	float: right;
+  display: inline-block;
+	width:0.4rem;
+	height:0.4rem;
+	background: url(../img/taskCenterMore.png) center no-repeat;
+	background-size: contain;
+}
+#signInTips{
+	width:2.7rem;
+	height:1.78rem;
+	background: #fff;
+	border-radius: 0.06rem;
+	position: fixed;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	z-index: 10;
+}
+.signInTipsTitl{
+	text-align: center;
+	margin-top: 0.18rem;
+	font-size: 0.17rem;
+	height:0.16rem;
+	line-height: 0.16rem;
+	font-weight: bold;
+}
+.signInTipsCont{
+	height: 1.08rem;
+	color: #868686;
+	font-size: 0.14rem;
+	padding: 0.2rem;
+}
+.signInTipsCont p:first-child{
+	margin-bottom: 0.1rem;
+}
+.signInTipsCont p{
+	line-height:0.15rem ;
+}
+.signInTipsIKnow{
+	border-top: 1px solid #D9D9D9;
+	font-size: 0.14rem;
+	line-height: 0.36rem;
+	height:0.36rem;
+	text-align: center;
+}
+
+#getMwindow{
+	width:2.16rem;
+	height:2.6rem;
+	border-radius: 0.06rem;
+	position: fixed;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	z-index: 10;
+}
+.getMwindowPic{
+	width:2.16rem;
+	height:2.1rem;
+	background:url(../img/taskCenterRewardMcoin.png) center no-repeat;
+	background-size:contain ;
+}
+.getMwindowMnm{
+	height:0.5rem;
+	line-height: 0.5rem;
+	color:#fff;
+	font-size: 0.2rem;
+	text-align: center;
+}
+#getMwindowMnm{
+	font-size: 0.39rem;
+	padding-right: 5px;
+}
+
+/*任务中心M币明细*/
+.hasborderBotom{
+	border-bottom: 1px solid #D9D9D9;
+}
+.mcoinDatlist{
+	display: -webkit-flex;
+	display: flex;
+	height: 0.76rem;
+	padding: 0.2rem 0.12rem;
+	background: #fff;
+	border-bottom: 1px solid #D9D9D9;
+}
+.mcoinDatlistLeft{
+	flex: 1;
+}
+.mcoinDatlistLeft p{
+	height:0.18rem;
+	line-height: 0.18rem;
+}
+.mcoinRecord{
+	font-size: 0.15rem;
+}
+.useTime{
+	font-size: 0.12rem;
+	color:#868686;
+}
+.mcoinNm{
+	font-size: 0.19rem;
+  height:0.36rem;
+	line-height: 0.36rem;
+}
+.getMColor{
+	color:#00b900;
+}
+.useMColor{
+	color:#e63100;
+}
+
+/*邀请好友*/
+#invitBd{
+	background: url(../img/invitaBg1.png) center no-repeat;
+	background-size:3.75rem 100%;
+	width:3.75rem;
+	height:100%;
+}
+.invitNbBd{
+	width:3rem;
+	height:3.83rem;
+	position: absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0.6rem;
+	margin:auto;
+	background: url(../img/invitInBg.png) center no-repeat;
+	background-size: contain;
+}
+#userHeadPic{
+	width:0.83rem;
+	height:0.83rem;
+	background: #FFF;
+	border:2px solid #D9D9D9;
+	position: absolute;
+	top:-0.415rem;
+	left:50%;
+	margin-left: -0.415rem;
+	border-radius: 0.415rem;
+	overflow: hidden;
+}
+#userHeadPic img{
+	width:100%;
+	display: block;
+}
+.invitUserTit{
+	text-align: center;
+	font-size: 0.16rem;
+	color:#b56719;
+	line-height: 0.24rem;
+	margin-top: 1.2rem;
+	margin-bottom: 0.25rem;
+	font-weight: bold;
+}
+.Mprice{
+	text-align: center;
+	font-size: 0.7rem;
+	line-height: 0.6rem;
+	color:#fb1b71;
+}
+.loadMoka{
+	text-align: center;
+	font-size:0.15rem;
+	color:#fff;
+	line-height: 0.75rem;
+	display: block;
+	height:0.8rem;
+	width:2.53rem;
+	margin:0 auto;
+	background: url(../img/invitBtnBg3.png) center no-repeat;
+	background-size:contain;
+
+}
+.invitCode{
+	font-size: 0.16rem;
+	text-align: center;
+	color:#b56719;
+	
+}
+.btmMsg{
+	position: absolute;
+	bottom:0.14rem;
+	height:0.8rem;
+	width:100%;
+	
+}
+.opMsg{
+	font-size: 0.12rem;
+	color:#fff;
+	text-align: center;
+	line-height: 0.24rem;
+	margin-bottom: 0.2rem;
+	margin-top: 0.1rem;
+}
+.ruleDes{
+	font-size: 0.09rem;
+	color:#fff;
+	text-align: center;
+	line-height: 0.24rem;
+}
+.McoinI{
+	font-size: 0.5rem;
+}
