@@ -156,7 +156,9 @@
 	}
 	.addAddr{
 		position: absolute;
-		width:100%;
+		width:16rem;
+		left:50%;
+		margin-left:-8rem;
 		height:100%;
 		top:0;
 		bottom:0;

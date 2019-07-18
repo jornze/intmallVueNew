@@ -6,22 +6,35 @@
 			<span v-show="islogin" @click='exit'>退出{{myname}}</span>
 		</header>	
 		<article class='banner'>
-			<router-link class='exchangeRecord' to='login'>兑换记录</router-link>
-			<!--<a href="exchangeRcord.html" class='exchangeRecord'>兑换记录</a>-->
+			<!--<router-link class='exchangeRecord' to='login'>兑换记录</router-link>
 			<p class='bannerMcoin'>
 				<i></i>{{newnm}}
-			</p>
+			</p>-->
+			<Slider></Slider>
 		</article>
+		<!--秒杀-->
 		<article class='goodsExchange'>
-			<section class='exchangeTitle'>
-				<span>大家都在兑</span>
+			<section class='exchangeTitle senconKill'>
+				<div> ZQ秒杀	
+				</div>
+				<div>
+					<div>12点场</div>
+					<i>01</i>
+					<i>:</i>
+					<i>23</i>
+					<i>:</i>
+					<i>05</i>	
+				</div>
+				<div>秒抢好货&gt;</div>
 			</section>
 		</article>
-		<div v-show='false'>
-					<h1 style='font-size: 14px;'>vuex 测试 Clicked: {{ getCount }} times</h1>
-				    <button @click="increment">+</button>
-				    <button @click="decrement">-</button>
-		</div>
+		<Sencondkill :secondKiiLists='secondKillData'></Sencondkill>
+		<!--特卖-->
+		<article class='goodsExchange'>
+			<section class='exchangeTitle'>
+				<span>促销特卖</span>
+			</section>
+		</article>
 		<div class='wrapperbd'>
 			<div ref='wrapper' class='homewrapper'>
 				<article class='goodsLists' >
@@ -38,12 +51,21 @@
 						<p class='goodsPrice'>
 							<i></i>{{item.price}}
 						</p>
-						<a href="javascript:;" class='ExchangeNow' @click='nowExchange(item)'>立即兑换</a>
+						<a href="javascript:;" class='ExchangeNow' @click='nowExchange(item)'>立即抢购</a>
 					</section>
 				</article>
 			</div>
 		</div>
+		<!--精选品类-->
+		<article class='goodsExchange'>
+			<section class='exchangeTitle styletitle'>
+				<div>精选品类</div>
+				<div>更多品类&gt;</div>
+			</section>
+		</article>
+		<StyleBetter :styleData='styleBetterD'></StyleBetter>
 		<homeUpBuy ref='shopDet' :det='shopdata'></homeUpBuy>
+		<NavBottom></NavBottom>
 	</div>
 </template>
 
@@ -53,15 +75,26 @@
     import { mapActions } from 'vuex'
 	import BScroll from 'better-scroll'
 	import homeUpBuy from './homeUpBuy.vue'
+	import Slider from './homeComponents/slider' //顶部焦点图
+	import NavBottom from './homeComponents/navBottom' //底部导航栏
+	import Sencondkill from './homeComponents/sencondkill'
+	import StyleBetter from './homeComponents/styleBetter'
 	export default{
 		components:{
 			homeUpBuy,
+			Slider,
+			NavBottom,
+			Sencondkill,
+			StyleBetter
 		},
 		data(){
 			return{
 				islogin:false,//是否登录
 				myname:'',//登录人账号
 				newnm:0,
+				secondKillData:{
+					type:Array
+				},
 				shopdata:{
 					type:Object
 				},
@@ -72,6 +105,24 @@
 				 allLoaded: false, //是否可以上拉属性，false可以上拉，true为禁止上拉，就是不让往上划加载数据了
       			scrollMode:"auto", //移动端弹性滚动效果，touch为弹性滚动，auto是非弹性滚动
 				loading:false,
+				styleBetterD:[
+					{
+						url:'',
+						pic:'https://gfs9.gomein.net.cn/wireless/T1cJhQBmDv1RCvBVdK_281_398.jpg'
+					},
+					{
+						url:'',
+						pic:'https://gfs9.gomein.net.cn/wireless/T1UodsBbdv1RCvBVdK_278_398.jpg'
+					},
+					{
+						url:'',
+						pic:'https://gfs6.gomein.net.cn/wireless/T1YYbvByCv1RCvBVdK_281_398.jpg'
+					},
+					{
+						url:'',
+						pic:'https://gfs5.gomein.net.cn/wireless/T148_bB4Av1RCvBVdK_281_398.jpg'
+					},
+				]
 			}
 			
 		},
@@ -84,7 +135,7 @@
 	    },
 		mounted(){
 			this.$nextTick(function(){
-				this.scroll();
+				/*this.scroll();*/
 				this.loginstate();
 			})
 		},
@@ -92,8 +143,18 @@
 			//this.$store.dispatch('allMcoin');
 			this.$axios.get('../static/data.json',{})
 			.then(res=>{
-				this.goods=res.data.shopsList;
+				this.goods=res.data.shopsList.slice(0,4);
+				//this.secondKillData=res.data.shopsList;
 				//this.allMcoin=res.data.allMcoin;
+				})
+			.catch(err=>{
+				console.log(err)
+			});
+			this.$axios.get('https://www.easy-mock.com/mock/5c2c592f86edfe7a71848bac/vuemall/secondKill',{})
+			.then(res=>{
+				console.log(res.data.data.list)
+				this.secondKillData=res.data.data.list;
+				
 				})
 			.catch(err=>{
 				console.log(err)
@@ -130,7 +191,8 @@
 				this.islogin=false;
 				localStorage.removeItem('token');
 			},
-			scroll(){
+			//去除了better-scroll
+			/*scroll(){
 				
 				this.scroll=new BScroll(this.$refs.wrapper,{
 					click: {
@@ -138,7 +200,7 @@
 						        default: true
 						      }
 				})
-			},
+			},*/
 			nowExchange(item){
 				this.shopdata=item;
 				this.$refs.shopDet.show();

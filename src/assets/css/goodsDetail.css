@@ -1,0 +1,280 @@
+.pad20{
+    padding: 20px;
+}
+.margBtm{
+    margin-bottom: 20px;
+}
+.module{
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 0 20px;
+}
+.googsDetailbd{
+    height:calc(100vh);
+}
+.goodsDetailTabbar{
+    background: #fff;
+    display: flex;
+    /*overflow: hidden;*/
+    border-bottom: 1px solid #ccc;
+   position: fixed;
+   z-index: 5;
+   width: 750px;
+}
+
+.goodsDetailTabbarMenu{
+    flex: 1;
+    margin: 0 20px;
+    height:80px
+}
+.tabbarIcon{
+    background: url(../img/intergralBackB.png) center 5px no-repeat;
+   background-size: contain; 
+  height: 80px;
+  flex-basis:80px;
+  order: -1;
+}
+.McoinDetailed{
+    flex-basis:140px;
+}
+
+
+
+/*商品 详情 评价最外围样式 去除头部 底部fixed定位高*/
+.scrollBD{
+    padding: 80px 0 120px;
+    background: #fff;
+}
+
+/*商品样式*/
+.goodspicarr{
+    position:relative;
+    width:100%;
+    padding:10px 5%;
+    height:300px;
+    background: #fff
+}
+.goodspicarr img{
+    width:100%;
+    height: 100%;
+}
+.goodspicarr span{
+
+    display:block;
+    background: #ccc;
+    color:#fff;
+    font-size: 16px;
+    position: absolute;
+    right:10%;
+    bottom: 20px;
+    width:80%;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+}
+.priceDiv{
+    height:180px;
+    padding:10px;
+    border-top:1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.priceDiv p:first-child{
+    line-height: 40px;
+    height:80px;
+    white-space: pre-wrap;
+    font-size: 30px;
+}
+.priceDiv p:first-child i{
+    background: #F20C59;
+    padding: 5px 20px;
+    font-size: 20px;
+    color:#fff;
+    margin:0 10px;
+}
+.priceDiv p:last-child{
+    line-height: 80px;
+    color:#F20C59;
+    font-size: 48px;
+    font-weight: bold;
+}
+.goodsSku{
+    padding:20px;
+}
+.goodsSku p{
+    display: flex;
+    height:50x;
+    line-height: 50px;
+}
+.goodsSku p span:first-child{
+    flex-basis: 100px;
+    color:#666;
+
+}
+.goodsSku p span:nth-child(2){
+    flex:1;
+   
+}
+.goodsSku p span:nth-child(2) i{
+    margin-right: 15px;
+    background-size: contain;
+    display: inline-block;
+    font-size:32px;
+}
+.goodsSku p span:nth-child(3){
+    flex-basis: 100px;
+    font-size: 40px;
+    text-align: right
+}
+.addServer{
+    color:#197FE7
+}
+.evaluate{
+    background: #fff;
+    padding: 0 20px;
+}
+.evaluateTop p{
+    height:80px;
+    line-height: 80px;
+    display: flex;
+}
+.evaluateTop p span{
+    flex:1;
+}
+.evaluateTop p span:nth-child(2){
+    text-align: right;
+}
+.evaluateMan p{
+    line-height: 80px;
+    height: 80px;
+    display: flex;
+}
+.evaluateMan p:first-child span:nth-child(1){
+    flex-basis: 80px;
+    text-align: center;
+    line-height: 119px;
+}
+.evaluateMan p:first-child span:nth-child(2){
+    flex-basis: 100px;
+}
+.evaluateMan p:first-child span:nth-child(3){
+    flex:1
+}
+.evaluateMan .custPic img{
+    width:60px;
+    height:60px;
+    border-radius: 30px;
+    margin-right: 15px;
+}
+.evaluateText{
+  position: fixed;
+  bottom:300px;
+  z-index: 101;
+  color:#fff;
+  font-size:36px;
+  line-height: 90px;  
+  width: 100%;
+}
+.evaluateHasPic{
+    border-top:2px solid #ccc;
+}
+.evaluateHasPic>p{
+    display: flex;
+    height:80px;
+    line-height: 80px;
+    
+
+}
+.evaluateHasPic>p span{
+    flex:1;
+}
+.evaluateHasPic>p span:nth-child(2){
+    text-align: right
+}
+.evaluateHasPicMain{
+    height:260px;
+ 
+}
+.evaluateHasPicMain ul{
+    display: flex;
+    
+}
+.evaluateHasPicMain ul li{
+    width:160px;
+    margin-right: 10px;
+    height:200px;
+    flex:1;
+}
+
+.evaluateHasPicMain-pic-box{
+   position: relative;
+   height: 200px;
+}
+.evaluateHasPicMain-pic-box img{
+    width: 100%;
+    height: 100%;
+}
+.evaluateHasPicMain-pic-box span{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    display: inline-block;
+    height:40px;
+    width:80px;
+    line-height: 40px;
+    text-align:center;
+    background: #ccc;
+    color:#fff;
+}
+.evaluateName{
+    height:60px;
+    line-height: 60px;
+    text-align: center;
+    width:100%;
+}
+.toAllDetail{
+    height:80px;
+    display: flex;
+    line-height: 80px;
+    
+}
+.toAllDetail span:nth-child(1){
+    flex:1;
+    text-align: center;
+}
+.toAllDetail span:nth-child(2){
+    flex-basis: 100px;
+    text-align: right;
+}
+
+
+/*详情样式*/
+.detailsTop{
+    width:100%;
+    display:flex;
+    
+}
+.detailsTop>div:nth-child(1){
+    flex-basis:200px;
+    height:200px;
+    margin-right: 20px;
+    border:1px solid #ddd;
+}
+.detailsTop>div:nth-child(1) img{
+    height:100%;
+}
+.detailsTop>div:nth-child(2){
+    flex:1;
+    padding: 25px 0;
+}
+.detailsTop>div:nth-child(2) p:last-child{
+    line-height: 50px;
+    height:50px;
+}
+
+.detailsTop>div:nth-child(2) p:first-child{
+    white-space: pre-wrap; /*p元素超出自动换行*/
+    line-height: 50px;
+    height:100px;
+}
+

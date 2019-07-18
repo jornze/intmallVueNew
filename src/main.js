@@ -6,9 +6,9 @@ import store from './store/store.js'
 import MintUi from 'mint-ui'
 import CubeUi from 'cube-ui'
 //import 'mint-ui/lib/style.min.css'
+//import 'lib-flexible/flexible'
 Vue.prototype.$axios=axios
 Vue.config.productionTip = false
-
 Vue.use(MintUi);
 Vue.use(CubeUi);
 /* eslint-disable no-new */

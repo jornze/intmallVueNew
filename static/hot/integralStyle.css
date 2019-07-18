@@ -1252,7 +1252,8 @@
   font-size: 0.5973333333rem; }
 
 .myState .myHead {
-  height: 3.4133333333rem; }
+  height: 3.4133333333rem;
+  line-height: 3.4133333333rem; }
 
 .myState .myHead span img {
   width: 2.9866666667rem;

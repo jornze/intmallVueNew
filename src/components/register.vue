@@ -152,7 +152,9 @@ import Swiper from 'swiper'
 	}
 	.register{
 		position: absolute;
-		width:100%;
+		width:16rem;
+		left:50%;
+		margin-left:-8rem;
 		height: 100%;
 		background: #fff;
 	}
@@ -161,10 +163,10 @@ import Swiper from 'swiper'
 		padding: 0.2rem 0.5rem;
 	}
 	.ptitle{
-		height:0.5rem;
-		line-height: 0.5rem;
+		height:1.8rem;
+		line-height: 1.8rem;
 		text-align: left;
-		font-size: 0.16rem;	
+		font-size: 0.6rem;	
 		padding-left: 0.4rem;
 	}
 	.ptitle span{

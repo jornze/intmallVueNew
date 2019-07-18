@@ -84,7 +84,9 @@
 		position: absolute;
 		top:0;
 		height:100%;
-		width:100%;
+		width:16rem;
+		left:50%;
+		margin-left:-8rem;
 		background: #f4f4f4;
 	}
 	.record-enter-active, .record-leave-active {

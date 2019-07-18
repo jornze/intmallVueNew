@@ -16,7 +16,7 @@
 							<span class='userName'>{{item.name}}</span>
 							<span class='userTel'>{{item.phone}}</span>
 						</p>
-						<p class='userAddDet'>{{item.address}}{{item.id}}</p>
+						<p class='userAddDet'>{{item.address}}</p>
 					</div>
 					<div class='DefaultAddIcon' v-show="item.isdefault==0?false:true"></div>
 				</section>
@@ -102,7 +102,9 @@
 	}
 	.addlist{
 		position: absolute;
-		width:100%;
+		width:16rem;
+		left:50%;
+		margin-left: -8rem;
 		height:100%;
 		top:0;
 		bottom:0;

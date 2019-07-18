@@ -1,9 +1,9 @@
 <template>
 	<transition name='taskcenter'>
 		<div class='taskcenter' style='font-size: 16px;'>
-			<siginTips ></siginTips>
-			<getMcoinframe ref='getMwindow' :Mnm='getMnm'></getMcoinframe>
-			<scroll class='taskscroll'>
+			
+			<div class='taskscroll'>
+				<cube-scroll ref="scroll">
 				<div>					
 				<article class='taskCenterBanner'>
 					<header class='header hearTopTansp'>
@@ -124,8 +124,10 @@
 					</p>
 				</div>
 				</div>
-			</scroll>
-			
+				</cube-scroll>
+			</div>
+			<siginTips ></siginTips>
+			<getMcoinframe ref='getMwindow' :Mnm='getMnm'></getMcoinframe>
 		</div>
 	</transition>
 </template>
@@ -137,6 +139,7 @@
 	import getMcoinframe from '@/components/getMcoinframe'
 	import {mapGetters} from 'vuex'
 	import {Toast} from 'mint-ui'
+	import {Scroll} from 'cube-ui'
 	export default{
 		data(){
 			return{
@@ -196,18 +199,17 @@
 </script>
 
 <style scoped>
+.taskscroll{
+	height:calc(100vh)
+}
 	.CanGeted{
 		background: #eee;
 		color:#fff;
 		border:1px solid #eee;
 	}
-	.taskcenter{
-		/*height:auto;
-	    overflow: hidden;*/
-	}
 	.taskscroll{
 		position: absolute;
-	    width: 100%;
+	    width: 16rem;
 	    top:0;
 	    bottom: 10px;
 	    height: 100%;

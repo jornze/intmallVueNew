@@ -21,17 +21,26 @@ exports.cssLoaders = function (options) {
       sourceMap: options.sourceMap
     }
   }
-
+  
   const postcssLoader = {
     loader: 'postcss-loader',
     options: {
       sourceMap: options.sourceMap
     }
   }
+  var px2remLoader = {
+    loader: 'px2rem-loader',
+    options: {
+        remUnit: 46.875, //保证所量即所得 iphone 6  750宽情况下的根元素html的fontSize的值
+       
+    }
+    }
   //cube-ui
   const stylusOptions={
   	'resolve url':true
   }
+
+  
   return {
   	 	css: generateLoaders(),
 	    postcss: generateLoaders(),
@@ -41,10 +50,12 @@ exports.cssLoaders = function (options) {
 	    stylus: generateLoaders('stylus', stylusOptions),
 	    styl: generateLoaders('stylus', stylusOptions)
   }
+
+  
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
-
+    //const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
+    var loaders = [cssLoader, px2remLoader, postcssLoader]
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
@@ -53,6 +64,7 @@ exports.cssLoaders = function (options) {
         })
       })
     }
+    
 
     // Extract CSS when that option is specified
     // (which is the case during production build)

@@ -21,14 +21,14 @@
 								</span>
 							</p>
 						</div>
-						<div class='iconfont icon-Imall-close-circle' style='font-size: 25px;color:#999;position: absolute;top:0rem;right:0rem' @click='hide()'></div>
+						<div class='iconfont icon-Imall-close-circle' style='font-size:1rem;color:#999;position: absolute;top:0.1rem;right:0rem' @click='hide()'></div>
 					</section>
 					<section class='goodsNum'>
 						<div class='goodsNumTitle'>数量</div>
 						<div class='goodsNumOp'>
 							<span id='nmRd' class='nmcom' @click='nmRd(det.quantity)'>-</span>
 							<span id='nm'>{{defaultNm}}</span>
-							<span id='nmAd'class='nmcom' @click='nmAd(det.quantity)'>+</span>
+							<span id='nmAd' class='nmcom' @click='nmAd(det.quantity)'>+</span>
 						</div>
 					</section>
 					<section class='indexAddress'>
@@ -146,12 +146,12 @@
 	.buyGoodsbox{
 		position: fixed;
 		bottom:0;
-		left:0;
+		left:50%;
 	}
 	.shopsUp-enter-active, .shopsUp-leave-active {
       transition: all .3s linear;
   	}
   	.shopsUp-enter, .shopsUp-leave-active {
-  	  bottom:-3.6rem;
+  	  bottom:-11.9467rem;
   	}
 </style>

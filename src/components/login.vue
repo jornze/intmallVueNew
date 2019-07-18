@@ -12,6 +12,7 @@
 			<p class='ptitle toregister'>
 				还未注册？请<router-link to='register' tag='span' >注册</router-link>
 			</p>
+			
 		</div>
 	</transition>
 </template>
@@ -43,7 +44,7 @@
 						localStorage.setItem('token',res.data.token);
 						localStorage.setItem('user',res.data.user);
 						//localStorage.setItem('psd',res.data.psd);
-						this.$router.push('/home')
+						this.$router.push('/')
 					}else{
 						Toast(res.data.msg);
 					}
@@ -65,15 +66,17 @@
 	}
 	.login{
 		position: absolute;
-		width:100%;
+		width:16rem;
+		margin-left:-8rem;
+		left:50%;
 		height: 100%;
 		background: #fff;
 	}
 	.ptitle{
-		height:0.5rem;
-		line-height: 0.5rem;
+		height:1.8rem;
+		line-height: 1.8rem;
 		text-align: left;
-		font-size: 0.16rem;	
+		font-size: 0.6rem;	
 		padding-left: 0.4rem;
 	}
 	.ptitle span{
@@ -87,4 +90,5 @@
 		text-align: center;
 		padding: 0.2rem 0.5rem;
 	}
+	
 </style>

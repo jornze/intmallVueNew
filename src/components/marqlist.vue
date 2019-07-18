@@ -1,48 +1,44 @@
 <template>
-	<div id="">
 		<section class='taskNotice'>
 			<div class='noticeIcon'></div>
-			<div id="noticeList" :class="{anim:animate==true}">
-				<p v-for='item in marqlist'>{{item}}</p>
+			<div id="noticeList" >
+				<cube-slide ref="newsSlide" :loop="true" :autoPlay="true" :direction="vertical" :showDots='false'>
+				  <cube-slide-item v-for="(item, index) in marqlist" :key="index" >
+				    <p href="" style='width:100%;height:1.7066666667rem;line-height:1.7066666667rem;'>
+				    	{{item.title}}
+				    </p> 
+				  </cube-slide-item>
+				</cube-slide>
 			</div>
 		</section>
-	</div>
 </template>
 
 <script>
+	import {Slide} from 'cube-ui'
 	export default{
 		data(){
 			return{
-				animate:false,
+				vertical:'vertical',
 				marqlist:[
-					'我是一行汉字我是一行汉字我是一行汉字我是一行汉字我是一行汉字我是一行汉字',
-					'wosoyigehaoeno nyaoshi zhichiwo  zzhida ba  afasa afvdfd'
+						{
+							'title':'范围广媳妇打死Greg',
+							'name':'1'
+						},
+						{
+							'title':'方式是否所代表的',
+							'name':'2'
+						}
 					]
-				}
+				 
+			}
 			
-		},
-		created(){
-			setInterval(this.showMarquee,2000)
-		},
-		methods:{
-			showMarquee() { 
-	                this.animate = true; 
-	                setTimeout(()=>{ 
-	               	this.animate = false;
-	                this.marqlist.push(this.marqlist[0]); 
-	                this.marqlist.shift();  
-	            },800)
-            }
 		}
+		
 	}
 </script>
 
-<style scoped>
-	.taskNotice{
-		overflow: hidden;
-	}
-	.anim{
-		transition: all 2s;
-		margin-top: -0.4rem;
+<style >
+	.cube-slide-item{
+		width:100%;
 	}
 </style>
