@@ -1,6 +1,6 @@
-# intmall
+# intmall 
 
-> 积分商城 about vue
+> 积分商城 about vue 是2018年上传的intmallvue 的增加版 里面增加了一些东西
 
 ## Build Setup
 
